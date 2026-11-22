@@ -1,0 +1,7 @@
+.header {
+  display: flex;
+  height: 30px;
+  margin: var(--size-margin);
+  gap:  calc(4 * var(--size-margin-x));
+  align-items: center;
+}

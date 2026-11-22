@@ -1,0 +1,69 @@
+.nav__header {
+  display: flex;
+  width: auto;
+  margin: 32px var(--size-nav-margin-x);
+  gap: calc(2 * var(--size-margin-x));
+  align-items: center;
+}
+
+.nav__title {
+  display: flex;
+  align-items: end;
+  gap: var(--size-margin-x)
+}
+
+.nav__subtitle {
+  margin: 6px var(--size-nav-margin-x);
+}
+
+.nav__subtitle h4 {
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.nav__icon {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  border-radius: var(--size-border-radius);
+}
+
+.nav__icon svg {
+  height: 16px;
+  width: 16px;
+  stroke: var(--color-text-contrast);
+  stroke-width: 2px;
+}
+
+.nav__list {
+  margin: var(--size-margin-y) calc(var(--size-nav-margin-x) - var(--size-padding-x));
+}
+
+.nav__list>li {
+  margin-bottom: calc(var(--size-margin-y) / 2);
+}
+
+.nav__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: var(--size-margin-y) var(--size-nav-margin-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__footer .footer__reference {
+  display: flex;
+}
+
+.nav__footer svg {
+  height: 24px;
+  width: 24px;
+  stroke: var(--color-text-primary);
+  stroke-width: 2px;
+}

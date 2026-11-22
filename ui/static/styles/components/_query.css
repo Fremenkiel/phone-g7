@@ -1,0 +1,31 @@
+.query__header {
+  margin: 0 var(--size-margin-x);
+}
+
+.query__body {
+  margin: 0 var(--size-margin-x);
+  padding: 0 14px;
+}
+
+.query__submit {
+  position: absolute;
+  top: 20px;
+  right: 14px;
+}
+
+.query__submit svg {
+  height: 10px;
+  width: 9px;
+  stroke: var(--color-text-contrast);
+  fill: var(--color-text-contrast);
+  margin-right: 6px;
+}
+
+.query__toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 14px;
+  padding: 8px;
+  height: 32px;
+  width: 32px;
+}

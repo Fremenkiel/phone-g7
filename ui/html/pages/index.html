@@ -1,0 +1,15 @@
+{{ define "body" }}
+<div class="page">
+  <h1>G7 Emulator</h1>
+  <p id="status">Connecting…</p>
+  <h2>Trigger event</h2>
+  <textarea id="payload">{"type":"card_read","device_id":"G7-001","card_id":"12345"}</textarea>
+  <button id="trigger">Queue event</button>
+  <p id="message"></p>
+  {{ block "table" . }}
+  {{ end }}
+</div>
+<script src="/scripts/event_handler.js" type="text/javascript"></script>
+{{ end }}
+
+{{ template "main" . }}

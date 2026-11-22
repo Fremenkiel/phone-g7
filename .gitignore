@@ -13,9 +13,7 @@
 
 # Code coverage profiles and other test artifacts
 *.out
-coverage.html
-coverage.txt
-coverage.xml
+coverage.*
 *.coverprofile
 profile.cov
 
@@ -27,8 +25,7 @@ go.work
 go.work.sum
 
 # env file
-.env
+.env*
 
-# Editor/IDE
-# .idea/
-# .vscode/
+tmp
+.DS_Store
