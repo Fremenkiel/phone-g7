@@ -29,10 +29,14 @@ import (
 func main() {
 	logger.NewLogger()
 
-	db, err := sql.Open("sqlite", "g7.db")
+	// The read loop and the send loop of the emulator write to the database at the same time.
+	// Without busy_timeout, SQLite does not wait for the other writer and gives SQLITE_BUSY.
+	db, err := sql.Open("sqlite", "file:g7.db?_pragma=busy_timeout(5000)&_pragma=journal_mode(WAL)")
 	if err != nil {
 		panic(err)
 	}
+	// SQLite permits one writer at a time, so one connection is sufficient.
+	db.SetMaxOpenConns(1)
 
 	if len(os.Args) < 5 {
 		logger.LogError("main", "add --device-id and --token")

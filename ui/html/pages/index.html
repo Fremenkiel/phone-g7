@@ -2,8 +2,28 @@
 <div class="page">
   <h1>G7 Emulator</h1>
   <p id="status">Connecting…</p>
+  <p id="subscription"></p>
+  <p id="screen"></p>
+  <h2>Actions</h2>
+  <div class="actions">
+    <form class="action" data-action="card-read">
+      <label for="card-id">Card UID</label>
+      <input id="card-id" name="id" value="04FC8862B93F80" autocomplete="off" required>
+      <button type="submit">Card read</button>
+    </form>
+    <form class="action" data-action="barcode">
+      <label for="barcode-id">Barcode</label>
+      <input id="barcode-id" name="id" value="123456789" autocomplete="off" required>
+      <button type="submit">Barcode</button>
+    </form>
+    <form class="action" data-action="pin">
+      <label for="pin-id">PIN</label>
+      <input id="pin-id" name="id" value="1234" inputmode="numeric" pattern="[0-9]+" autocomplete="off" required>
+      <button type="submit">PIN</button>
+    </form>
+  </div>
   <h2>Trigger event</h2>
-  <textarea id="payload">{"type":"card_read","device_id":"G7-001","card_id":"12345"}</textarea>
+  <textarea id="payload">{"Cmd":"App.CardIdent","MT":"Evt","Data":{"UID":"04FC8862B93F80","Device":"INTERNAL"}}</textarea>
   <button id="trigger">Queue event</button>
   <p id="message"></p>
   {{ block "table" . }}
